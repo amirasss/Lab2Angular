@@ -1,0 +1,29 @@
+<h1 [innerText]="personName" [style]="'background-color:red'"></h1>
+<img [src]="imgUrl" alt="">
+<div (click)="showPassword =!showPassword" [ngClass]="{'showPassword': showPassword}">Amira</div>
+<input [type]="showPassword ? 'text' : 'password'">
+<div [ngSwitch]="number">
+    <h1 *ngSwitchCase="1">h1</h1>
+    <h1 *ngSwitchCase="2">h2</h1>
+    <h1  *ngSwitchDefault>h3</h1>
+</div>
+<h1 *ngIf="number==1">h1</h1>
+<h1 *ngIf="number==2">h2</h1>
+<!-- <h1 *ngIf="showPassword; else g">show</h1>
+<ng-templet #g>
+    <h1>not show</h1>
+</ng-templet> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
