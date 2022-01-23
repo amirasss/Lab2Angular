@@ -8,4 +8,5 @@ export interface Product
   discount?:Number;
   imageUrl:string
   suplier?:Suplier;
+  
 }

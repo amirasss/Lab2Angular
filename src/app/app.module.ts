@@ -8,6 +8,7 @@ import { ProductItemComponent } from './core/product-feature/product-item/produc
 import { ProductListingComponent } from './core/product-feature/product-listing/product-listing.component';
 import { ProductFilterComponent } from './core/product-feature/product-filter/product-filter.component';
 import { TestCliComponent } from './test-cli/test-cli.component';
+import { DropDownComponent } from './shared/drop-down/drop-down.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TestCliComponent } from './test-cli/test-cli.component';
     ProductItemComponent,
     ProductListingComponent,
     ProductFilterComponent,
-    TestCliComponent
+    TestCliComponent,
+    DropDownComponent
   ],
   imports: [
     BrowserModule,

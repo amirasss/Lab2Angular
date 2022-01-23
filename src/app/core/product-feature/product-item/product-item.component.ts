@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ThisReceiver } from '@angular/compiler';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Product } from 'src/app/_models/product/product.model';
 
 @Component({
@@ -10,10 +11,17 @@ export class ProductItemComponent implements OnInit {
 
   @Input()
   productItem!: Product;
-  // calcdiscount=this.productItem.discount ? this.productItem.discount : this.productItem.price;
+
+  @Output()
+  itemAddedToCart :EventEmitter<Product>=new EventEmitter<Product>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onItemAdded(){
+    console.log(this.productItem);
+    this.itemAddedToCart.emit(this.productItem);
+
   }
 
 }
